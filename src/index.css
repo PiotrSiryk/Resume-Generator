@@ -5,15 +5,26 @@
 
 .all {
   background-color: antiquewhite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .input-nav {
   background-color: aqua;
+  width: 25%;
 }
 
 .resume {
   background-color: gray;
-  width: 820px;
-  height: 1050px;
+  width: 700px;
+  height: 987px;
+  /* width: 805px;
+  height: 1135px; */
+}
+
+p {
+  width: 300px;
+  word-wrap: break-word;
 }
 /*# sourceMappingURL=index.css.map */

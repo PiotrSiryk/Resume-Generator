@@ -25,7 +25,7 @@ export default function Bio() {
             id="bio"
             onChange={(event) =>
               setCurrent((prev) => {
-                return { ...prev, name: event.target.value };
+                return { ...prev, bio: event.target.value };
               })
             }
           ></textarea>

@@ -8,7 +8,7 @@ export default function BasicInfo() {
     phone: "",
     email: "",
   });
-  const addBasicInfo = (ev) => {
+  const add = (ev) => {
     ev.preventDefault();
     const { dispatch } = context;
     dispatch({ type: "add-basic-info", data: current });
@@ -53,7 +53,7 @@ export default function BasicInfo() {
             }
           />
         </div>
-        <button onClick={(event) => addBasicInfo(event)}>AAAA</button>
+        <button onClick={(event) => add(event)}>AAAA</button>
       </form>
     </div>
   );
