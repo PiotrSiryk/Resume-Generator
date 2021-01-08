@@ -30,7 +30,7 @@ export default function Bio() {
             }
           ></textarea>
         </div>
-        <button onClick={(event) => add(event)}>AAAA</button>
+        <button onClick={(event) => add(event)}>Add</button>
       </form>
     </div>
   );
