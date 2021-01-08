@@ -67,4 +67,15 @@ p {
   border: none;
   margin: 15px 0;
 }
+
+.display-skills {
+  display: -ms-grid;
+  display: grid;
+  gap: 15px;
+  grid: 1fr 1fr / 1fr 1fr;
+}
+
+.display-skills div {
+  background-color: #3983fa;
+}
 /*# sourceMappingURL=index.css.map */

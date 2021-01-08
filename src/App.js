@@ -13,6 +13,17 @@ const reducer = (state, action) => {
       return { ...state, basic: action.data };
     case "add-bio":
       return { ...state, bio: action.data };
+    case "add-skill":
+      if (state.skill) {
+        return { ...state, skill: [...state.skill, action.data.skill] };
+      } else {
+        return { ...state, skill: [action.data.skill] };
+      }
+    case "remove-skill":
+      const removed = state.skill.filter(
+        (element, index) => index !== action.data
+      );
+      return { ...state, skill: removed };
   }
 };
 

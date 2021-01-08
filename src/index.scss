@@ -53,3 +53,12 @@ p {
     margin: 15px 0;
   }
 }
+
+.display-skills {
+  display: grid;
+  gap: 15px;
+  grid: 1fr 1fr / 1fr 1fr;
+  div {
+    background-color: $secondary;
+  }
+}
