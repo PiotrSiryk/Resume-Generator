@@ -61,7 +61,8 @@ p {
 }
 
 .display-skills,
-.display-education {
+.display-education,
+.display-experience {
   display: grid;
   gap: 15px;
   grid: auto / 1fr 1fr;

@@ -3,6 +3,7 @@ import BasicInfo from "./inputs/basicInfo";
 import Bio from "./inputs/bio";
 import Skills from "./inputs/skills";
 import Education from "./inputs/education";
+import Experience from "./inputs/experience";
 
 export default function InputBar() {
   return (
@@ -11,6 +12,7 @@ export default function InputBar() {
       <Bio />
       <Skills />
       <Education />
+      <Experience />
     </nav>
   );
 }

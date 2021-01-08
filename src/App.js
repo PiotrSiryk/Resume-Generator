@@ -7,6 +7,7 @@ import Print from "./modules/print";
 export const dataContext = React.createContext();
 
 const reducer = (state, action) => {
+  console.log(action);
   switch (action.type) {
     case "add-basic-info":
       return { ...state, basic: action.data };
@@ -34,6 +35,17 @@ const reducer = (state, action) => {
         (el, index) => index !== action.data
       );
       return { ...state, education: removedEducation };
+    case "add-experience":
+      if (state.experience) {
+        return { ...state, experience: [...state.experience, action.data] };
+      } else {
+        return { ...state, experience: [action.data] };
+      }
+    case "remove-experience":
+      const removedExperience = state.experience.filter(
+        (el, index) => index !== action.data
+      );
+      return { ...state, experience: removedExperience };
   }
 };
 

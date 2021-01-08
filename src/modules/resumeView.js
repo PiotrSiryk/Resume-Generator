@@ -4,7 +4,7 @@ import { dataContext } from "../App";
 export default function ResumeView() {
   const context = useContext(dataContext);
   console.log(context.data);
-  const { basic, bio, skill, education } = context.data;
+  const { basic, bio, skill, education, experience } = context.data;
 
   return (
     <div className="resume-container">
@@ -21,6 +21,10 @@ export default function ResumeView() {
         {education &&
           education.map((element, index) => {
             return <div key={index}>{element.degree}</div>;
+          })}
+        {experience &&
+          experience.map((element, index) => {
+            return <div key={index}>{element.job}</div>;
           })}
       </div>
     </div>

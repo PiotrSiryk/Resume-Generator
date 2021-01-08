@@ -76,7 +76,8 @@ p {
 }
 
 .display-skills,
-.display-education {
+.display-education,
+.display-experience {
   display: -ms-grid;
   display: grid;
   gap: 15px;
@@ -84,7 +85,8 @@ p {
 }
 
 .display-skills div,
-.display-education div {
+.display-education div,
+.display-experience div {
   background-color: #3983fa;
 }
 /*# sourceMappingURL=index.css.map */
