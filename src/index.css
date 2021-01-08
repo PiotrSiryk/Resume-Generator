@@ -68,14 +68,16 @@ p {
   margin: 15px 0;
 }
 
-.display-skills {
+.display-skills,
+.display-education {
   display: -ms-grid;
   display: grid;
   gap: 15px;
   grid: 1fr 1fr / 1fr 1fr;
 }
 
-.display-skills div {
+.display-skills div,
+.display-education div {
   background-color: #3983fa;
 }
 /*# sourceMappingURL=index.css.map */
