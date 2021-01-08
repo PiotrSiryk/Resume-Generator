@@ -19,14 +19,21 @@ const reducer = (state, action) => {
         return { ...state, skill: [action.data.skill] };
       }
     case "remove-skill":
-      const removed = state.skill.filter((el, index) => index !== action.data);
-      return { ...state, skill: removed };
+      const removedSkill = state.skill.filter(
+        (el, index) => index !== action.data
+      );
+      return { ...state, skill: removedSkill };
     case "add-education":
       if (state.education) {
         return { ...state, education: [...state.education, action.data] };
       } else {
         return { ...state, education: [action.data] };
       }
+    case "remove-education":
+      const removedEducation = state.education.filter(
+        (el, index) => index !== action.data
+      );
+      return { ...state, education: removedEducation };
   }
 };
 

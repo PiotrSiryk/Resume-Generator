@@ -17,7 +17,7 @@ export default function Education() {
     dispatch({ type: "add-education", data: current });
   };
   const remove = (index) => {
-    dispatch({ type: "remove-skill", data: index });
+    dispatch({ type: "remove-education", data: index });
   };
 
   return (
