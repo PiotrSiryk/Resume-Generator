@@ -12,12 +12,11 @@ export default function Education() {
   });
   const { dispatch, data } = context;
   const add = (ev) => {
-    console.log(data.education);
     ev.preventDefault();
-    dispatch({ type: "add-education", data: current });
+    dispatch({ name: "education", type: "add-array", data: current });
   };
   const remove = (index) => {
-    dispatch({ type: "remove-education", data: index });
+    dispatch({ name: "education", type: "remove-element", data: index });
   };
 
   return (

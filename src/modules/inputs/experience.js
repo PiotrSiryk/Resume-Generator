@@ -13,12 +13,15 @@ export default function Experience() {
   });
   const { dispatch, data } = context;
   const add = (ev) => {
-    console.log(data.education);
     ev.preventDefault();
-    dispatch({ type: "add-experience", data: current });
+    dispatch({ name: "experience", type: "add-array", data: current });
   };
   const remove = (index) => {
-    dispatch({ type: "remove-experience", data: index });
+    dispatch({
+      name: "experience",
+      type: "remove-element",
+      data: index,
+    });
   };
 
   return (

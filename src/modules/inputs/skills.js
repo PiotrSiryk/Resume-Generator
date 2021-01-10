@@ -10,13 +10,11 @@ export default function Skills() {
   const { dispatch, data } = context;
   const add = (ev) => {
     ev.preventDefault();
-    console.log(context);
-    dispatch({ type: "add-skill", data: current });
+    dispatch({ name: "skill", type: "add-array", data: current });
   };
   const remove = (index) => {
-    dispatch({ type: "remove-skill", data: index });
+    dispatch({ name: "skill", type: "remove-element", data: index });
   };
-
   return (
     <div className="add-skill">
       <form action="">
@@ -40,7 +38,7 @@ export default function Skills() {
           data.skill.map((element, index) => {
             return (
               <div key={index}>
-                <div>{element}</div>
+                <div>{element.skill}</div>
                 <button onClick={() => remove(index)}>
                   <FaTrash />
                 </button>

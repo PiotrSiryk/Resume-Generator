@@ -9,7 +9,7 @@ export default function Bio() {
   const add = (ev) => {
     ev.preventDefault();
     const { dispatch } = context;
-    dispatch({ type: "add-bio", data: current });
+    dispatch({ type: "add-object", data: current, name: "bio" });
   };
 
   return (

@@ -11,7 +11,7 @@ export default function BasicInfo() {
   const add = (ev) => {
     ev.preventDefault();
     const { dispatch } = context;
-    dispatch({ type: "add-basic-info", data: current });
+    dispatch({ name: "basic", type: "add-object", data: current });
   };
 
   return (
