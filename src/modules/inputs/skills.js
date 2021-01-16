@@ -7,7 +7,7 @@ export default function Skills() {
   const [current, setCurrent] = useState({
     skill: [],
   });
-  const { dispatch, data } = context;
+  const { dispatch, data, language } = context;
   const add = (ev) => {
     ev.preventDefault();
     dispatch({ name: "skill", type: "add-array", data: current });
@@ -19,7 +19,7 @@ export default function Skills() {
     <div className="add-skill">
       <form action="">
         <div>
-          <label htmlFor="skill">Skill</label>
+          <label htmlFor="skill">{language.nav.skill}</label>
           <input
             type="text"
             id="skill"
@@ -30,7 +30,7 @@ export default function Skills() {
             }
           />
         </div>
-        <button onClick={(event) => add(event)}>Add</button>
+        <button onClick={(event) => add(event)}>{language.nav.add}</button>
       </form>
 
       <div className="display-skills">

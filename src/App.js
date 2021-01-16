@@ -1,7 +1,9 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer, useEffect, useRef, useState } from "react";
 import InputBar from "./modules/inputbar";
-import ResumeView from "./modules/resumeView";
+import ResumeView from "./modules/resumeDisplays/view1/View1";
 import Print from "./modules/print";
+import Nav from "./modules/nav";
+import Eng from "./languages/Eng.json";
 
 export const dataContext = React.createContext();
 
@@ -28,6 +30,8 @@ const reducer = (state, action) => {
 };
 
 export default function App() {
+  const [language, setLanguage] = useState(Eng);
+  const canvasRef = useRef();
   const localData = JSON.parse(localStorage.getItem("ResumeData"));
   const [data, dispatch] = useReducer(reducer, localData || {});
 
@@ -36,7 +40,10 @@ export default function App() {
   }, [data]);
 
   return (
-    <dataContext.Provider value={{ dispatch, data }}>
+    <dataContext.Provider
+      value={{ dispatch, data, canvasRef, language, setLanguage }}
+    >
+      <Nav />
       <Print />
       <div className="all">
         <InputBar />

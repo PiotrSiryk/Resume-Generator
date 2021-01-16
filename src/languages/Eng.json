@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "bio": "Bio",
+    "skill": "Skill",
+    "degree": "Degree",
+    "school": "School",
+    "start": "Start",
+    "end": "End",
+    "job": "Job",
+    "company": "Company",
+    "jobDesc": "Job Description",
+    "add": "Add"
+  }
+}

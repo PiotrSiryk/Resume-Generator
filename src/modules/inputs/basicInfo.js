@@ -8,9 +8,9 @@ export default function BasicInfo() {
     phone: "",
     email: "",
   });
+  const { dispatch, language } = context;
   const add = (ev) => {
     ev.preventDefault();
-    const { dispatch } = context;
     dispatch({ name: "basic", type: "add-object", data: current });
   };
 
@@ -18,7 +18,7 @@ export default function BasicInfo() {
     <div className="add-basic-info">
       <form action="">
         <div>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">{language.nav.name}</label>
           <input
             type="text"
             id="name"
@@ -30,7 +30,7 @@ export default function BasicInfo() {
           />
         </div>
         <div>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">{language.nav.email}</label>
           <input
             type="email"
             id="email"
@@ -42,7 +42,7 @@ export default function BasicInfo() {
           />
         </div>
         <div>
-          <label htmlFor="phone">Phone</label>
+          <label htmlFor="phone">{language.nav.phone}</label>
           <input
             type="tel"
             id="phone"
@@ -53,7 +53,7 @@ export default function BasicInfo() {
             }
           />
         </div>
-        <button onClick={(event) => add(event)}>Add</button>
+        <button onClick={(event) => add(event)}>{language.nav.add}</button>
       </form>
     </div>
   );

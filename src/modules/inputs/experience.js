@@ -11,7 +11,7 @@ export default function Experience() {
     start: "",
     end: "",
   });
-  const { dispatch, data } = context;
+  const { dispatch, data, language } = context;
   const add = (ev) => {
     ev.preventDefault();
     dispatch({ name: "experience", type: "add-array", data: current });
@@ -28,7 +28,7 @@ export default function Experience() {
     <div className="add-education">
       <form action="">
         <div>
-          <label htmlFor="job">job</label>
+          <label htmlFor="job">{language.nav.job}</label>
           <input
             type="text"
             id="job"
@@ -40,7 +40,7 @@ export default function Experience() {
           />
         </div>
         <div>
-          <label htmlFor="company">company</label>
+          <label htmlFor="company">{language.nav.company}</label>
           <input
             type="text"
             id="company"
@@ -52,7 +52,7 @@ export default function Experience() {
           />
         </div>
         <div>
-          <label htmlFor="start">start</label>
+          <label htmlFor="start">{language.nav.start}</label>
           <input
             type="date"
             id="start"
@@ -64,7 +64,7 @@ export default function Experience() {
           />
         </div>
         <div>
-          <label htmlFor="end">end</label>
+          <label htmlFor="end">{language.nav.end}</label>
           <input
             type="date"
             id="end"
@@ -76,7 +76,7 @@ export default function Experience() {
           />
         </div>
         <div>
-          <label htmlFor="desc">Job description</label>
+          <label htmlFor="desc">{language.nav.jobDesc}</label>
           <textarea
             name=""
             id="desc"
@@ -89,7 +89,7 @@ export default function Experience() {
             }
           ></textarea>
         </div>
-        <button onClick={(event) => add(event)}>Add</button>
+        <button onClick={(event) => add(event)}>{language.nav.add}</button>
       </form>
 
       <div className="display-experience">

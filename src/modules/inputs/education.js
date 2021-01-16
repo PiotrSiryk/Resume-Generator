@@ -10,7 +10,7 @@ export default function Education() {
     start: "",
     end: "",
   });
-  const { dispatch, data } = context;
+  const { dispatch, data, language } = context;
   const add = (ev) => {
     ev.preventDefault();
     dispatch({ name: "education", type: "add-array", data: current });
@@ -23,7 +23,7 @@ export default function Education() {
     <div className="add-education">
       <form action="">
         <div>
-          <label htmlFor="degree">degree</label>
+          <label htmlFor="degree">{language.nav.degree}</label>
           <input
             type="text"
             id="degree"
@@ -35,7 +35,7 @@ export default function Education() {
           />
         </div>
         <div>
-          <label htmlFor="school">school</label>
+          <label htmlFor="school">{language.nav.school}</label>
           <input
             type="text"
             id="school"
@@ -47,7 +47,7 @@ export default function Education() {
           />
         </div>
         <div>
-          <label htmlFor="start">start</label>
+          <label htmlFor="start">{language.nav.start}</label>
           <input
             type="date"
             id="start"
@@ -59,7 +59,7 @@ export default function Education() {
           />
         </div>
         <div>
-          <label htmlFor="end">end</label>
+          <label htmlFor="end">{language.nav.end}</label>
           <input
             type="date"
             id="end"
@@ -70,7 +70,7 @@ export default function Education() {
             }
           />
         </div>
-        <button onClick={(event) => add(event)}>Add</button>
+        <button onClick={(event) => add(event)}>{language.nav.add}</button>
       </form>
 
       <div className="display-education">

@@ -6,9 +6,9 @@ export default function Bio() {
   const [current, setCurrent] = useState({
     bio: "",
   });
+  const { dispatch, language } = context;
   const add = (ev) => {
     ev.preventDefault();
-    const { dispatch } = context;
     dispatch({ type: "add-object", data: current, name: "bio" });
   };
 
@@ -16,7 +16,7 @@ export default function Bio() {
     <div className="add-basic-info">
       <form action="">
         <div>
-          <label htmlFor="bio">Bio</label>
+          <label htmlFor="bio">{language.nav.bio}</label>
           <textarea
             name=""
             cols="30"
@@ -30,7 +30,7 @@ export default function Bio() {
             }
           ></textarea>
         </div>
-        <button onClick={(event) => add(event)}>Add</button>
+        <button onClick={(event) => add(event)}>{language.nav.add}</button>
       </form>
     </div>
   );

@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "name": "Imie i Nazwisko",
+    "email": "Email",
+    "phone": "Telefon",
+    "bio": "Podsumowanie",
+    "skill": "Umiejetnosci",
+    "degree": "Wyksztalcenie",
+    "school": "Szkola",
+    "start": "Poczatek",
+    "end": "Koniec",
+    "job": "Stanowisko",
+    "company": "Nazwa Firmy",
+    "jobDesc": "Opis",
+    "add": "Dodaj"
+  }
+}
