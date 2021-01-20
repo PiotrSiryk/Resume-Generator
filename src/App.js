@@ -44,7 +44,6 @@ export default function App() {
       value={{ dispatch, data, canvasRef, language, setLanguage }}
     >
       <Nav />
-      <Print />
       <div className="all">
         <InputBar />
         <ResumeView />

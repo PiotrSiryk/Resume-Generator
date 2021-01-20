@@ -1,8 +1,187 @@
-.resume-container {
-  background-color: rosybrown;
+:root {
+  font-size: 15px;
 }
 
-.resume-container div {
-  color: red;
+.resume {
+  background-color: #fbfbfb;
+  border: 1px solid black;
+  width: 805px;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid: 250px repeat(3, 1fr)/repeat(3, 33%);
+  gap: 5px;
+}
+
+.resume > header {
+  background-color: #333233;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  margin-top: 55px;
+}
+
+.resume > main {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 4;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 5;
+}
+
+.resume > nav {
+  background-color: #d2ddd5;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 5;
+  margin-left: 35px;
+}
+
+.resume > nav > .display-image {
+  width: 100%;
+  margin: 35px 0 0 0;
+}
+
+.resume > nav > .display-image canvas {
+  width: 100%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  border-radius: 50%;
+  border: 1px #333233 solid;
+}
+
+nav > .info section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+nav > .info section > label {
+  background-color: #333233;
+  color: #fbfbfb;
+  width: 80%;
+  font-size: 1.1rem;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 0 15px 0;
+}
+
+nav > .info section > ul {
+  font-size: 1.1rem;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3px;
+}
+
+#cv-education {
+  text-align: center;
+}
+
+#cv-education div h3 {
+  color: #fbfbfb;
+}
+
+#cv-education div h4 {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  text-transform: none;
+  font-weight: lighter;
+}
+
+#cv-education div h5 {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  text-transform: none;
+  font-weight: lighter;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header h1 {
+  color: #fbfbfb;
+}
+
+main > section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: justify;
+  padding: 25px 35px 5px 35px;
+}
+
+main > section > label {
+  background-color: #d2ddd5;
+  font-size: 1.5rem;
+  padding: 7px 0;
+  text-align: center;
+  margin: 0 0 20px 0;
+  border-radius: 15px;
+}
+
+.experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.experience > h4 {
+  font-size: 1.3rem;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.experience > h5 {
+  margin: 0 auto 10px auto;
+}
+
+.experience p {
+  width: 100%;
+  text-align: justify;
 }
 /*# sourceMappingURL=view1.css.map */

@@ -5,6 +5,7 @@
     "phone": "Telefon",
     "bio": "Podsumowanie",
     "skill": "Umiejetnosci",
+    "hobby": "Zainteresowanie",
     "degree": "Wyksztalcenie",
     "school": "Szkola",
     "start": "Poczatek",
@@ -12,6 +13,15 @@
     "job": "Stanowisko",
     "company": "Nazwa Firmy",
     "jobDesc": "Opis",
-    "add": "Dodaj"
+    "add": "Dodaj",
+    "addPhoto": "Dodaj Zdjęcie"
+  },
+  "cv": {
+    "skill": "Umiejetnosci",
+    "education": "Edukacja",
+    "hobby": "Moje Hobby",
+    "contact": "Kontakt",
+    "email": "Email",
+    "phone": "Telefon"
   }
 }

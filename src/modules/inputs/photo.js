@@ -12,7 +12,7 @@ import { dataContext } from "../../App";
 export default function Photo() {
   const context = useContext(dataContext);
 
-  const { canvasRef } = context;
+  const { canvasRef, language } = context;
   const [image, setImage] = useState();
   const [displayStats, setDisplayStats] = useState();
   const [displayStatsPixels, setDisplayStatsPixels] = useState();
@@ -57,7 +57,9 @@ export default function Photo() {
         <ImageUploading value={image} onChange={onChange} dataURLKey="data_url">
           {({ onImageUpload }) => (
             <div className="upload__image-wrapper">
-              <button onClick={onImageUpload}>Click here</button>
+              <button onClick={onImageUpload} className="add-photo-btn">
+                {language.nav.addPhoto}
+              </button>
               &nbsp;
             </div>
           )}
@@ -68,7 +70,7 @@ export default function Photo() {
           <div className="crop-container">
             <Cropper
               zoomSpeed={0.2}
-              /* cropShape="round" */
+              cropShape="round"
               image={image[0].data_url}
               crop={crop}
               zoom={zoom}
@@ -81,11 +83,6 @@ export default function Photo() {
           <div className="controls"></div>
         </div>
       )}
-      {/* {image && displayStats && (
-        <div className="display-image">
-          <canvas className="my-canvas" ref={canvasRef}></canvas>
-        </div>
-      )} */}
     </div>
   );
 }
