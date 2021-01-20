@@ -3,19 +3,15 @@ import { dataContext } from "../../../App";
 
 export default function View1Main() {
   const context = useContext(dataContext);
-  const { basic, bio, skill, education, experience, hobby } = context.data;
-  console.log(basic);
-  const { language } = context;
+  const { bio, experience } = context.data;
 
   useEffect(() => {
     const head = document.querySelector(".resume>header").offsetHeight;
     const bioSection = document.querySelector(".bio-section").offsetHeight;
     const expSection = document.querySelector(".experience-section")
       .offsetHeight;
-    console.log(head + bioSection + expSection);
 
     if (head + bioSection + expSection > 1137) {
-      console.log(document.querySelector(".resume"));
       document.querySelector(".resume").style.height = `${2 * 1137}px`;
     }
   }, []);

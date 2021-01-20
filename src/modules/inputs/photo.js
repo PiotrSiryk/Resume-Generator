@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useCallback,
-  useEffect,
-  useRef,
-  useContext,
-} from "react";
+import React, { useState, useCallback, useEffect, useContext } from "react";
 import Cropper from "react-easy-crop";
 import ImageUploading from "react-images-uploading";
 import { dataContext } from "../../App";

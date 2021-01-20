@@ -3,9 +3,8 @@ import { dataContext } from "../../../App";
 
 export default function View1Nav() {
   const context = useContext(dataContext);
-  const { basic, bio, skill, education, experience, hobby } = context.data;
+  const { basic, skill, education, hobby } = context.data;
   const { language } = context;
-  console.log(context.data);
   return (
     <>
       <nav>

@@ -1,7 +1,6 @@
 import React, { useReducer, useEffect, useRef, useState } from "react";
 import InputBar from "./modules/inputbar";
 import ResumeView from "./modules/resumeDisplays/view1/View1";
-import Print from "./modules/print";
 import Nav from "./modules/nav";
 import Eng from "./languages/Eng.json";
 

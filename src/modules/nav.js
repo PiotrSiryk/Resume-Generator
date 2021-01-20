@@ -7,7 +7,7 @@ import engIcon from "../resources/united-kingdom-flag-icon-64.png";
 import Print from "./print";
 
 export default function Nav() {
-  const { language, setLanguage } = useContext(dataContext);
+  const { setLanguage } = useContext(dataContext);
 
   const eng = () => {
     setLanguage(Eng);
@@ -20,10 +20,10 @@ export default function Nav() {
     <nav className="top-nav">
       <div>
         <button onClick={() => eng()} className="language-btn">
-          <img src={engIcon}></img>
+          <img src={engIcon} alt="icon_eng"></img>
         </button>
         <button onClick={() => pl()} className="language-btn">
-          <img src={plIcon}></img>
+          <img src={plIcon} alt="icon_pl"></img>
         </button>
       </div>
       <Print />
