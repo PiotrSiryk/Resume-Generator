@@ -49,12 +49,8 @@ export default function View1Nav() {
           <section>
             <label htmlFor="cv-contact">{language.cv.contact}</label>
             <ul id="cv-contact">
-              <li>
-                {language.cv.email}: {basic.email}
-              </li>
-              <li>
-                {language.cv.phone}:{basic.phone}
-              </li>
+              <li>{basic.email}</li>
+              <li>{basic.phone}</li>
             </ul>
           </section>
         </div>

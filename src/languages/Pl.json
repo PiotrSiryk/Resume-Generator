@@ -1,14 +1,14 @@
 {
   "nav": {
-    "name": "Imie i Nazwisko",
+    "name": "Imię i Nazwisko",
     "email": "Email",
     "phone": "Telefon",
     "bio": "Podsumowanie",
-    "skill": "Umiejetnosci",
+    "skill": "Umiejętności",
     "hobby": "Zainteresowanie",
     "degree": "Wyksztalcenie",
-    "school": "Szkola",
-    "start": "Poczatek",
+    "school": "Szkoła",
+    "start": "Początek",
     "end": "Koniec",
     "job": "Stanowisko",
     "company": "Nazwa Firmy",
@@ -17,11 +17,13 @@
     "addPhoto": "Dodaj Zdjęcie"
   },
   "cv": {
-    "skill": "Umiejetnosci",
+    "skill": "Umiejętności",
     "education": "Edukacja",
     "hobby": "Moje Hobby",
     "contact": "Kontakt",
     "email": "Email",
-    "phone": "Telefon"
+    "phone": "Telefon",
+    "bio": "O mnie",
+    "experience": "doświadczenie"
   }
 }

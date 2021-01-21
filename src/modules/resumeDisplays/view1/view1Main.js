@@ -4,6 +4,7 @@ import { dataContext } from "../../../App";
 export default function View1Main() {
   const context = useContext(dataContext);
   const { bio, experience } = context.data;
+  const { language } = context;
 
   useEffect(() => {
     const head = document.querySelector(".resume>header").offsetHeight;
@@ -19,11 +20,11 @@ export default function View1Main() {
     <>
       <main>
         <section className="bio-section">
-          <label>About Me</label>
+          <label>{language.cv.bio}</label>
           <div>{bio.bio}</div>
         </section>
         <section className="experience-section">
-          <label>About Me</label>
+          <label>{language.cv.experience}</label>
           <div>
             {experience.map((element, index) => {
               return (

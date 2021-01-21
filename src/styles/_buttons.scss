@@ -1,9 +1,12 @@
-.language-btn {
-  height: 40px;
-  border: none;
+button {
   cursor: pointer;
+}
+.language-btn {
+  height: 35px;
+  border: none;
+  margin: 0 5px;
   > img {
-    height: 40px;
+    height: 100%;
     width: 60px;
   }
 }
@@ -19,7 +22,26 @@
     font-size: 23px;
     height: 30px;
     width: 100px;
-    border: none;
     margin: 15px 0;
+    color: $font;
+    border-radius: 10px;
   }
+  button:hover {
+    background-color: lighten($secondary, 10);
+  }
+}
+.display-skills,
+.display-education,
+.display-experience {
+  > div {
+    > button {
+      background-color: transparent;
+      border: none;
+      color: white;
+    }
+  }
+}
+.btn-print {
+  height: 30px;
+  width: 100px;
 }

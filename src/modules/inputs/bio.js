@@ -13,7 +13,7 @@ export default function Bio() {
   };
 
   return (
-    <div className="add-basic-info">
+    <div className="add-bio">
       <form action="">
         <div>
           <label htmlFor="bio">{language.nav.bio}</label>

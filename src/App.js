@@ -7,6 +7,7 @@ import Eng from "./languages/Eng.json";
 export const dataContext = React.createContext();
 
 const reducer = (state, action) => {
+  console.log(state);
   const { name, data } = action;
   switch (action.type) {
     case "add-object":
@@ -32,9 +33,20 @@ export default function App() {
   const [language, setLanguage] = useState(Eng);
   const canvasRef = useRef();
   const localData = JSON.parse(localStorage.getItem("ResumeData"));
-  const [data, dispatch] = useReducer(reducer, localData || {});
-
+  const [data, dispatch] = useReducer(
+    reducer,
+    localData || {
+      basic: {},
+      skill: [],
+      education: [],
+      bio: [],
+      experience: [],
+      hobby: [],
+    }
+  );
+  console.log(data);
   useEffect(() => {
+    console.log("dsa");
     localStorage.setItem("ResumeData", JSON.stringify(data));
   }, [data]);
 

@@ -25,7 +25,7 @@ export default function Experience() {
   };
 
   return (
-    <div className="add-education">
+    <div className="add-experience">
       <form action="">
         <div>
           <label htmlFor="job">{language.nav.job}</label>
@@ -100,8 +100,9 @@ export default function Experience() {
                 <div>
                   <h4>{element.job}</h4>
                   <h4>{element.company}</h4>
-                  <h4>{element.start}</h4>
-                  <h4>{element.end}</h4>
+                  <h4>
+                    {element.start} - {element.end}
+                  </h4>
                   <h4>{element.description}</h4>
                 </div>
                 <button onClick={() => remove(index)}>

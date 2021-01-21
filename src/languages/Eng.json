@@ -22,6 +22,8 @@
     "hobby": "My Hobbies",
     "contact": "Contact",
     "email": "Email",
-    "phone": "Phone"
+    "phone": "Phone",
+    "bio": "about me",
+    "experience": "experience"
   }
 }

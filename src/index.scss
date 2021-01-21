@@ -1,7 +1,7 @@
-$primary: white;
-/* $primary: #141f39; */
-$secondary: #3983fa;
-$font: black;
+$primary: rgb(66, 66, 66);
+$secondary: rgb(148, 0, 0);
+$font: white;
+$bcg: white;
 :root {
   font-family: sans-serif;
 }
@@ -11,8 +11,19 @@ $font: black;
 }
 @import "./styles/buttons";
 @import "./styles/addPhoto";
+@import "./styles/topNav";
+
+@mixin longDisplayFlex {
+  background-color: $secondary;
+  display: flex;
+  word-break: break-all;
+  justify-content: space-between;
+  padding: 5px 10px 5px 5px;
+  border-radius: 5px;
+}
+
 body {
-  background-color: #f1f1f1;
+  background-color: $primary;
 }
 textarea {
   resize: none;
@@ -22,21 +33,24 @@ textarea {
   grid: 1fr / 50% 50%;
   margin: 0 auto;
   width: 1000px;
-  gap: 15px;
 }
 .input-nav {
-  width: 500px;
+  width: 450px;
   color: $font;
-  background-color: $primary;
+  background-color: $bcg;
 }
 p {
   width: 300px;
   word-wrap: break-word;
 }
 .input-nav > div > form {
-  margin: 15px;
+  margin: 5px 15px;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   div {
+    width: 90%;
     display: flex;
     flex-direction: column;
     > label {
@@ -56,26 +70,52 @@ p {
   }
 }
 
-.display-skills,
+.display-skills {
+  display: grid;
+  gap: 10px;
+  grid: auto / 1fr 1fr;
+  margin: 0 15px;
+  > div {
+    @include longDisplayFlex;
+  }
+}
 .display-education,
 .display-experience {
-  display: grid;
-  gap: 15px;
-  grid: auto / 1fr 1fr;
-  div {
-    background-color: $secondary;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 15px;
+  > div {
+    @include longDisplayFlex;
+    > div {
+      margin: 5px;
+      > * {
+        margin: 5px;
+      }
+    }
   }
 }
 
-.top-nav {
-  background-color: rgb(133, 1, 1);
-}
-
 .resume-container {
+  position: fixed;
   width: 805px;
   height: 1137px;
   transform-origin: top left;
   transform: scale(0.6);
+  overflow: auto;
+  right: -200px;
+}
+.resume-container::-webkit-scrollbar {
+  display: none;
+}
+.resume-container::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  transform: translateY(50%);
+  height: 2px;
+  top: 100%;
+  background-color: black;
 }
 
 .display-image {

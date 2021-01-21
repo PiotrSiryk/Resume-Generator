@@ -81,8 +81,9 @@ export default function Education() {
                 <div>
                   <h4>{element.degree}</h4>
                   <h4>{element.school}</h4>
-                  <h4>{element.start}</h4>
-                  <h4>{element.end}</h4>
+                  <h4>
+                    {element.start} - {element.end}
+                  </h4>
                 </div>
                 <button onClick={() => remove(index)}>
                   <FaTrash />

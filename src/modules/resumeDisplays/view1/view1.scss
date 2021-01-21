@@ -5,6 +5,9 @@ $secondary: #333233;
   font-size: 15px;
 }
 .resume {
+  label {
+    text-transform: uppercase;
+  }
   background-color: $background-main;
   border: 1px solid black;
   width: 805px;
@@ -41,7 +44,6 @@ $secondary: #333233;
         width: 100%;
         transform: scale(0.8);
         border-radius: 50%;
-        border: 1px $secondary solid;
       }
     }
   }
@@ -55,6 +57,7 @@ nav {
       justify-content: center;
       align-items: center;
       text-transform: uppercase;
+      margin: 10px 0;
       > label {
         background-color: $secondary;
         color: $background-main;
@@ -72,6 +75,10 @@ nav {
         flex-direction: column;
         justify-content: center;
         gap: 3px;
+        > li {
+          word-break: break-all;
+          margin: 0 15px;
+        }
       }
     }
   }
@@ -83,17 +90,13 @@ nav {
     h3 {
       color: $background-main;
     }
-    h4 {
+    h4,
+    h3 {
       font-family: "Times New Roman", Times, serif;
       font-style: italic;
       text-transform: none;
       font-weight: lighter;
-    }
-    h5 {
-      font-family: "Times New Roman", Times, serif;
-      font-style: italic;
-      text-transform: none;
-      font-weight: lighter;
+      word-break: break-all;
     }
   }
 }
@@ -137,5 +140,12 @@ main {
   p {
     width: 100%;
     text-align: justify;
+  }
+}
+
+.bio-section,
+.experience-section {
+  > div {
+    white-space: pre-wrap;
   }
 }

@@ -13,6 +13,10 @@
   gap: 5px;
 }
 
+.resume label {
+  text-transform: uppercase;
+}
+
 .resume > header {
   background-color: #333233;
   -ms-grid-column: 1;
@@ -54,7 +58,6 @@
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
   border-radius: 50%;
-  border: 1px #333233 solid;
 }
 
 nav > .info section {
@@ -72,6 +75,7 @@ nav > .info section {
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase;
+  margin: 10px 0;
 }
 
 nav > .info section > label {
@@ -101,6 +105,11 @@ nav > .info section > ul {
   gap: 3px;
 }
 
+nav > .info section > ul > li {
+  word-break: break-all;
+  margin: 0 15px;
+}
+
 #cv-education {
   text-align: center;
 }
@@ -109,18 +118,13 @@ nav > .info section > ul {
   color: #fbfbfb;
 }
 
-#cv-education div h4 {
+#cv-education div h4,
+#cv-education div h3 {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
   text-transform: none;
   font-weight: lighter;
-}
-
-#cv-education div h5 {
-  font-family: "Times New Roman", Times, serif;
-  font-style: italic;
-  text-transform: none;
-  font-weight: lighter;
+  word-break: break-all;
 }
 
 header {
@@ -183,5 +187,10 @@ main > section > label {
 .experience p {
   width: 100%;
   text-align: justify;
+}
+
+.bio-section > div,
+.experience-section > div {
+  white-space: pre-wrap;
 }
 /*# sourceMappingURL=view1.css.map */
